@@ -18,3 +18,4 @@ libxposed
 .cxx
 /out
 /.idea
+java_pid*.hprof
