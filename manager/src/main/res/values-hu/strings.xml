@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Hozzáadás</string>
     <string name="install">Telepítés</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Néhány funkció nem elérhető</string>
     <string name="home_api_version">API verzió</string>
     <string name="home_lspatch_version">LSPatch verzió</string>
-    <string name="home_framework_version">Keretrendszer verziója</string>
     <string name="home_system_version">Rendszer verzió</string>
     <string name="home_device">Eszköz</string>
     <string name="home_system_abi">Rendszer ABI</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">Inject loader dex</string>
     <string name="patch_inject_dex_desc">Az elszigetelt szolgáltatásokat nyújtó alkalmazásoknál, például a böngészők renderelő motorjainál, kapcsolja be ezt a lehetőséget, hogy biztosítsa a megfelelő működésüket.</string>
 </resources>
+

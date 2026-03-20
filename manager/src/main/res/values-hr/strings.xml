@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Dodaj</string>
     <string name="install">Instaliraj</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Neke funkcije nisu dostupne</string>
     <string name="home_api_version">API verzija</string>
     <string name="home_lspatch_version">LSPatch verzija</string>
-    <string name="home_framework_version">Framework verzija</string>
     <string name="home_system_version">Verzija sustava</string>
     <string name="home_device">Uređaj</string>
     <string name="home_system_abi">Sustav ABI</string>
@@ -87,3 +86,4 @@
     <string name="settings_keystore_wrong_alias_password">Pogrešna lozinka za alias</string>
     <string name="settings_detail_patch_logs">Dnevnici zakrpa detalja</string>
 </resources>
+

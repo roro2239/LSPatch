@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Papildyti</string>
     <string name="install">Įdiekite</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Kai kurios funkcijos nepasiekiamos</string>
     <string name="home_api_version">API versija</string>
     <string name="home_lspatch_version">LSPatch versija</string>
-    <string name="home_framework_version">Framework versija</string>
     <string name="home_system_version">Sistemos versija</string>
     <string name="home_device">Įrenginys</string>
     <string name="home_system_abi">Sistema ABI</string>
@@ -87,3 +86,4 @@
     <string name="settings_keystore_wrong_alias_password">Neteisingas slapyvardžio slaptažodis</string>
     <string name="settings_detail_patch_logs">Išsamūs pataisų žurnalai</string>
 </resources>
+

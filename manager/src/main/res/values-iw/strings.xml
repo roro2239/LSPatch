@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">לְהוֹסִיף</string>
     <string name="install">להתקין</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">חלק מהפונקציות אינן זמינות</string>
     <string name="home_api_version">גרסת API</string>
     <string name="home_lspatch_version">גרסת LSPatch</string>
-    <string name="home_framework_version">גרסת מסגרת</string>
     <string name="home_system_version">גרסת מערכת</string>
     <string name="home_device">התקן</string>
     <string name="home_system_abi">מערכת ABI</string>
@@ -87,3 +86,4 @@
     <string name="settings_keystore_wrong_alias_password">סיסמת כינוי שגויה</string>
     <string name="settings_detail_patch_logs">פירוט יומני תיקון</string>
 </resources>
+

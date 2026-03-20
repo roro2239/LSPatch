@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Προσθήκη</string>
     <string name="install">Εγκαταστήστε το</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Ορισμένες λειτουργίες δεν είναι διαθέσιμες</string>
     <string name="home_api_version">Έκδοση API</string>
     <string name="home_lspatch_version">Έκδοση LSPatch</string>
-    <string name="home_framework_version">Έκδοση πλαισίου</string>
     <string name="home_system_version">Έκδοση συστήματος</string>
     <string name="home_device">Συσκευή</string>
     <string name="home_system_abi">Σύστημα ABI</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">Έγχυση dex φορτωτή</string>
     <string name="patch_inject_dex_desc">Για εφαρμογές με απομονωμένες υπηρεσίες, όπως οι μηχανές αναπαραγωγής των προγραμμάτων περιήγησης, παρακαλούμε ενεργοποιήστε αυτήν την επιλογή για να βεβαιωθείτε ότι λειτουργούν σωστά.</string>
 </resources>
+

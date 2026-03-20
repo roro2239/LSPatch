@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Lisama</string>
     <string name="install">Installige</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Mõned funktsioonid pole saadaval</string>
     <string name="home_api_version">API versioon</string>
     <string name="home_lspatch_version">LSPatchi versioon</string>
-    <string name="home_framework_version">Raamversioon</string>
     <string name="home_system_version">Süsteemi versioon</string>
     <string name="home_device">Seade</string>
     <string name="home_system_abi">Süsteemi ABI</string>
@@ -87,3 +86,4 @@
     <string name="settings_keystore_wrong_alias_password">Vale aliase parool</string>
     <string name="settings_detail_patch_logs">Üksikasjade paikade logid</string>
 </resources>
+

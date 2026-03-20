@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Přidat</string>
     <string name="install">Instalace</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Některé funkce nejsou k dispozici</string>
     <string name="home_api_version">Verze API</string>
     <string name="home_lspatch_version">Verze LSPatch</string>
-    <string name="home_framework_version">Verze rámce</string>
     <string name="home_system_version">Verze systému</string>
     <string name="home_device">přístroj</string>
     <string name="home_system_abi">Systém ABI</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">Injektovat dex zavaděče</string>
     <string name="patch_inject_dex_desc">Pro aplikace s izolovanými službami, jako jsou vykreslování prohlížečů, zapněte tuto možnost, abyste zajistili, že fungují správně.</string>
 </resources>
+

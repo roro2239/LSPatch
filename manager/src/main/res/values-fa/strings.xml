@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">افزودن</string>
     <string name="install">نصب</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">برخی از عملکردها در دسترس نیستند</string>
     <string name="home_api_version">نسخه API</string>
     <string name="home_lspatch_version">نسخه LSPatch</string>
-    <string name="home_framework_version">نسخه فریمورک</string>
     <string name="home_system_version">نسخه اندروید</string>
     <string name="home_device">مدل دستگاه</string>
     <string name="home_system_abi">نوع پردازنده</string>
@@ -87,3 +86,4 @@
     <string name="settings_keystore_wrong_alias_password">رمز یا نام مستعار اشتباه است</string>
     <string name="settings_detail_patch_logs">گزارش های اطلاعات پچ</string>
 </resources>
+

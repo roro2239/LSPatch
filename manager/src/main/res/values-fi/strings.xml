@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Lisätä</string>
     <string name="install">Asenna</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Jotkut toiminnot eivät ole käytettävissä</string>
     <string name="home_api_version">API-versio</string>
     <string name="home_lspatch_version">LSPatch-versio</string>
-    <string name="home_framework_version">Framework-versio</string>
     <string name="home_system_version">Järjestelmän versio</string>
     <string name="home_device">Laite</string>
     <string name="home_system_abi">Järjestelmä ABI</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">Inject loadader dex</string>
     <string name="patch_inject_dex_desc">Jos sovelluksissa on erillisiä palveluja, kuten selainten render moottorit, ota tämä vaihtoehto käyttöön varmistaaksesi, että ne toimivat oikein.</string>
 </resources>
+

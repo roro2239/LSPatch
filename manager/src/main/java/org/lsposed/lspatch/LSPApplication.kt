@@ -18,6 +18,7 @@ class LSPApplication : Application() {
 
     lateinit var prefs: SharedPreferences
     lateinit var tmpApkDir: File
+    lateinit var patchedApkDir: File
 
     val globalScope = CoroutineScope(Dispatchers.Default)
 
@@ -27,6 +28,7 @@ class LSPApplication : Application() {
         lspApp = this
         filesDir.mkdir()
         tmpApkDir = cacheDir.resolve("apk").also { it.mkdir() }
+        patchedApkDir = (getExternalFilesDir(null) ?: filesDir).resolve("patched").also { it.mkdirs() }
         prefs = lspApp.getSharedPreferences("settings", Context.MODE_PRIVATE)
         ShizukuApi.init(this)
         AppBroadcastReceiver.register(this)

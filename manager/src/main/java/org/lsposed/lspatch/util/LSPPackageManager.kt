@@ -15,7 +15,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
-import androidx.core.net.toUri
 import androidx.documentfile.provider.DocumentFile
 import dev.rikka.tools.refine.Refine
 import kotlinx.coroutines.Dispatchers
@@ -23,13 +22,13 @@ import kotlinx.coroutines.withContext
 import kotlinx.parcelize.Parcelize
 import me.zhanghai.android.appiconloader.AppIconLoader
 import org.lsposed.lspatch.config.ConfigManager
-import org.lsposed.lspatch.config.Configs
 import org.lsposed.lspatch.lspApp
 import org.lsposed.lspatch.share.Constants
 import java.io.File
 import java.io.IOException
 import java.text.Collator
 import java.util.*
+import java.util.zip.ZipFile
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
@@ -37,13 +36,15 @@ object LSPPackageManager {
 
     private const val TAG = "LSPPackageManager"
     private const val SETTINGS_CATEGORY = "de.robv.android.xposed.category.MODULE_SETTINGS"
+    private const val MODERN_JAVA_INIT = "META-INF/xposed/java_init.list"
+    private const val LEGACY_JAVA_INIT = "assets/xposed_init"
 
     const val STATUS_USER_CANCELLED = -2
 
     @Parcelize
     class AppInfo(val app: ApplicationInfo, val label: String) : Parcelable {
         val isXposedModule: Boolean
-            get() = app.metaData?.get("xposedminversion") != null
+            get() = app.metaData?.get("xposedminversion") != null || hasXposedInitEntry(app)
     }
 
     var appList by mutableStateOf(listOf<AppInfo>())
@@ -52,6 +53,20 @@ object LSPPackageManager {
     @SuppressLint("StaticFieldLeak")
     private val iconLoader = AppIconLoader(lspApp.resources.getDimensionPixelSize(android.R.dimen.app_icon_size), false, lspApp)
     private val appIcon = mutableMapOf<String, ImageBitmap>()
+
+    private fun hasXposedInitEntry(apkPath: String?): Boolean {
+        if (apkPath.isNullOrBlank()) return false
+        return runCatching {
+            ZipFile(apkPath).use { zip ->
+                zip.getEntry(MODERN_JAVA_INIT) != null || zip.getEntry(LEGACY_JAVA_INIT) != null
+            }
+        }.getOrDefault(false)
+    }
+
+    private fun hasXposedInitEntry(app: ApplicationInfo): Boolean {
+        app.splitSourceDirs?.forEach { if (hasXposedInitEntry(it)) return true }
+        return hasXposedInitEntry(app.sourceDir)
+    }
 
     suspend fun fetchAppList() {
         withContext(Dispatchers.IO) {
@@ -90,15 +105,14 @@ object LSPPackageManager {
                 flags = flags or PackageManagerHidden.INSTALL_ALLOW_TEST or PackageManagerHidden.INSTALL_REPLACE_EXISTING
                 Refine.unsafeCast<SessionParamsHidden>(params).installFlags = flags
                 ShizukuApi.createPackageInstallerSession(params).use { session ->
-                    val uri = Configs.storageDirectory?.toUri() ?: throw IOException("Uri is null")
-                    val root = DocumentFile.fromTreeUri(lspApp, uri) ?: throw IOException("DocumentFile is null")
-                    root.listFiles().forEach { file ->
-                        if (file.name?.endsWith(Constants.PATCH_FILE_SUFFIX) != true) return@forEach
+                    val patchedApks = lspApp.patchedApkDir.listFiles()?.filter {
+                        it.name.endsWith(Constants.PATCH_FILE_SUFFIX)
+                    }.orEmpty()
+                    if (patchedApks.isEmpty()) throw IOException("No patched apk found")
+                    patchedApks.forEach { file ->
                         Log.d(TAG, "Add ${file.name}")
-                        val input = lspApp.contentResolver.openInputStream(file.uri)
-                            ?: throw IOException("Cannot open input stream")
-                        input.use {
-                            session.openWrite(file.name!!, 0, input.available().toLong()).use { output ->
+                        file.inputStream().use { input ->
+                            session.openWrite(file.name, 0, file.length()).use { output ->
                                 input.copyTo(output)
                                 session.fsync(output)
                             }

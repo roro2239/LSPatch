@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">شامل کریں۔ </string>
     <string name="install">Install</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">کچھ فنکشنز دستیاب نہیں ہیں۔</string>
     <string name="home_api_version">API ورژن</string>
     <string name="home_lspatch_version">ایل ایس پیچ ورژن</string>
-    <string name="home_framework_version">فریم ورک ورژن</string>
     <string name="home_system_version">سسٹم ورژن</string>
     <string name="home_device">ڈیوائس</string>
     <string name="home_system_abi">سسٹم ABI</string>
@@ -87,3 +86,4 @@
     <string name="settings_keystore_wrong_alias_password">غلط عرفی پاس ورڈ</string>
     <string name="settings_detail_patch_logs">تفصیلی پیچ لاگز</string>
 </resources>
+

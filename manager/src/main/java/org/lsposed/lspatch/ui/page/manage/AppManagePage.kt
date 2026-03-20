@@ -20,7 +20,6 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
@@ -30,8 +29,6 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.core.net.toUri
-import androidx.documentfile.provider.DocumentFile
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import com.ramcosta.composedestinations.result.NavResult
@@ -40,7 +37,6 @@ import kotlinx.coroutines.launch
 import org.lsposed.lspatch.BuildConfig
 import org.lsposed.lspatch.R
 import org.lsposed.lspatch.config.ConfigManager
-import org.lsposed.lspatch.config.Configs
 import org.lsposed.lspatch.database.entity.Module
 import org.lsposed.lspatch.lspApp
 import org.lsposed.lspatch.share.Constants
@@ -58,7 +54,6 @@ import org.lsposed.lspatch.ui.viewmodel.manage.AppManageViewModel
 import org.lsposed.lspatch.ui.viewstate.ProcessingState
 import org.lsposed.lspatch.util.LSPPackageManager
 import org.lsposed.lspatch.util.ShizukuApi
-import java.io.IOException
 
 private const val TAG = "AppManagePage"
 
@@ -257,56 +252,7 @@ fun AppManageBody(
 
 @Composable
 fun AppManageFab(navigator: DestinationsNavigator) {
-    val context = LocalContext.current
-    val snackbarHost = LocalSnackbarHost.current
-    val scope = rememberCoroutineScope()
-    var shouldSelectDirectory by remember { mutableStateOf(false) }
     var showNewPatchDialog by remember { mutableStateOf(false) }
-
-    val errorText = stringResource(R.string.patch_select_dir_error)
-    val launcher = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-        try {
-            if (it.resultCode == Activity.RESULT_CANCELED) return@rememberLauncherForActivityResult
-            val uri = it.data?.data ?: throw IOException("No data")
-            val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
-            context.contentResolver.takePersistableUriPermission(uri, takeFlags)
-            Configs.storageDirectory = uri.toString()
-            Log.i(TAG, "Storage directory: ${uri.path}")
-            showNewPatchDialog = true
-        } catch (e: Exception) {
-            Log.e(TAG, "Error when requesting saving directory", e)
-            scope.launch { snackbarHost.showSnackbar(errorText) }
-        }
-    }
-
-    if (shouldSelectDirectory) {
-        AlertDialog(
-            onDismissRequest = { shouldSelectDirectory = false },
-            confirmButton = {
-                TextButton(
-                    content = { Text(stringResource(android.R.string.ok)) },
-                    onClick = {
-                        launcher.launch(Intent(Intent.ACTION_OPEN_DOCUMENT_TREE))
-                        shouldSelectDirectory = false
-                    }
-                )
-            },
-            dismissButton = {
-                TextButton(
-                    content = { Text(stringResource(android.R.string.cancel)) },
-                    onClick = { shouldSelectDirectory = false }
-                )
-            },
-            title = {
-                Text(
-                    modifier = Modifier.fillMaxWidth(),
-                    text = stringResource(R.string.patch_select_dir_title),
-                    textAlign = TextAlign.Center
-                )
-            },
-            text = { Text(stringResource(R.string.patch_select_dir_text)) }
-        )
-    }
 
     if (showNewPatchDialog) {
         AlertDialog(
@@ -362,23 +308,6 @@ fun AppManageFab(navigator: DestinationsNavigator) {
 
     FloatingActionButton(
         content = { Icon(Icons.Filled.Add, stringResource(R.string.add)) },
-        onClick = {
-            val uri = Configs.storageDirectory?.toUri()
-            if (uri == null) {
-                shouldSelectDirectory = true
-            } else {
-                runCatching {
-                    val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
-                    context.contentResolver.takePersistableUriPermission(uri, takeFlags)
-                    if (DocumentFile.fromTreeUri(context, uri)?.exists() == false) throw IOException("Storage directory was deleted")
-                }.onSuccess {
-                    showNewPatchDialog = true
-                }.onFailure {
-                    Log.w(TAG, "Failed to take persistable permission for saved uri", it)
-                    Configs.storageDirectory = null
-                    shouldSelectDirectory = true
-                }
-            }
-        }
+        onClick = { showNewPatchDialog = true }
     )
 }

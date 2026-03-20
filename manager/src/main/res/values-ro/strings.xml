@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Adăuga</string>
     <string name="install">Instalați</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Unele funcții nu sunt disponibile</string>
     <string name="home_api_version">Versiunea API</string>
     <string name="home_lspatch_version">Versiunea LSPatch</string>
-    <string name="home_framework_version">Versiunea cadru</string>
     <string name="home_system_version">Versiunea de sistem</string>
     <string name="home_device">Dispozitiv</string>
     <string name="home_system_abi">Sistem ABI</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">Injectare loader dex</string>
     <string name="patch_inject_dex_desc">Pentru aplicațiile cu servicii izolate, cum ar fi motoarele de randare a browserelor, vă rugăm să porniți această opțiune pentru a vă asigura că acestea funcționează corect.</string>
 </resources>
+

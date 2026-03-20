@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Додати</string>
     <string name="install">Встановити</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Деякі функції недоступні</string>
     <string name="home_api_version">Версія API</string>
     <string name="home_lspatch_version">Версія LSPatch</string>
-    <string name="home_framework_version">Версія Framework</string>
     <string name="home_system_version">Версія системи</string>
     <string name="home_device">Пристрій</string>
     <string name="home_system_abi">Система ABI</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">Ввести dex завантажувач</string>
     <string name="patch_inject_dex_desc">Для додатків з ізольованими послугами, такими як системи візуалізації, увімкніть цю опцію, щоб вони працювали належним чином.</string>
 </resources>
+

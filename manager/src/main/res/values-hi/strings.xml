@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">जोड़ना</string>
     <string name="install">इंस्टॉल</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">कुछ फ़ंक्शन अनुपलब्ध</string>
     <string name="home_api_version">एपीआई संस्करण</string>
     <string name="home_lspatch_version">एलएसपैच संस्करण</string>
-    <string name="home_framework_version">फ्रेमवर्क संस्करण</string>
     <string name="home_system_version">सिस्टम संस्करण</string>
     <string name="home_device">उपकरण</string>
     <string name="home_system_abi">सिस्टम एबीआई</string>
@@ -87,3 +86,4 @@
     <string name="settings_keystore_wrong_alias_password">गलत उपनाम पासवर्ड</string>
     <string name="settings_detail_patch_logs">विस्तार पैच लॉग</string>
 </resources>
+

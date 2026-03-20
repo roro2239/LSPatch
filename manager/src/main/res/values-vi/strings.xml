@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Thêm vào</string>
     <string name="install">Cài đặt</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Một số chức năng không khả dụng</string>
     <string name="home_api_version">Phiên bản API</string>
     <string name="home_lspatch_version">LSPatch Version</string>
-    <string name="home_framework_version">Phiên bản khung</string>
     <string name="home_system_version">Phiên bản hệ thống</string>
     <string name="home_device">Thiết bị</string>
     <string name="home_system_abi">Hệ thống ABI</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">Tiêm bộ nạp dex</string>
     <string name="patch_inject_dex_desc">Đối với các ứng dụng có dịch vụ riêng biệt, chẳng hạn như công cụ kết xuất của trình duyệt, vui lòng bật tùy chọn này để đảm bảo chúng hoạt động bình thường.</string>
 </resources>
+

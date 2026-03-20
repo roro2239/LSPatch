@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">যোগ করুন</string>
     <string name="install">ইনস্টল করুন</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">কিছু ফাংশন অনুপলব্ধ</string>
     <string name="home_api_version">API সংস্করণ</string>
     <string name="home_lspatch_version">এলএসপ্যাচ সংস্করণ</string>
-    <string name="home_framework_version">ফ্রেমওয়ার্ক সংস্করণ</string>
     <string name="home_system_version">সিস্টেম সংস্করণ</string>
     <string name="home_device">যন্ত্র</string>
     <string name="home_system_abi">সিস্টেম ABI</string>
@@ -87,3 +86,4 @@
     <string name="settings_keystore_wrong_alias_password">ভুল ওরফে পাসওয়ার্ড</string>
     <string name="settings_detail_patch_logs">বিস্তারিত প্যাচ লগ</string>
 </resources>
+

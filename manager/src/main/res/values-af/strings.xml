@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Voeg by</string>
     <string name="install">Installeer</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Sommige funksies nie beskikbaar nie</string>
     <string name="home_api_version">API weergawe</string>
     <string name="home_lspatch_version">LSPatch weergawe</string>
-    <string name="home_framework_version">Raamwerk weergawe</string>
     <string name="home_system_version">Stelsel weergawe</string>
     <string name="home_device">Toestel</string>
     <string name="home_system_abi">Stelsel ABI</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">Spuit loader dex</string>
     <string name="patch_inject_dex_desc">Vir toepassings met geïsoleerde dienste, soos die weergawe-enjins van blaaiers, skakel asseblief hierdie opsie aan om te verseker dat hulle behoorlik werk.</string>
 </resources>
+

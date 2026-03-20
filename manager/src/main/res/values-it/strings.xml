@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Aggiungi</string>
     <string name="install">Installa</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Alcune funzioni non sono disponibili</string>
     <string name="home_api_version">Versione API</string>
     <string name="home_lspatch_version">Versione LSPatch</string>
-    <string name="home_framework_version">Versione del framework</string>
     <string name="home_system_version">Versione del sistema</string>
     <string name="home_device">Dispositivo</string>
     <string name="home_system_abi">ABI del sistema</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">Inject loader dex</string>
     <string name="patch_inject_dex_desc">Per applicazioni con servizi isolati, come i motori di rendering dei browser, attiva questa opzione per assicurarti che funzionino correttamente.</string>
 </resources>
+

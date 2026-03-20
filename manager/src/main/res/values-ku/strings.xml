@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Lêzêdekirin</string>
     <string name="install">Lêkirin</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Hin fonksiyon ne berdest in</string>
     <string name="home_api_version">Guhertoya API</string>
     <string name="home_lspatch_version">Guhertoya LSPatch</string>
-    <string name="home_framework_version">Guhertoya Çarçoveyê</string>
     <string name="home_system_version">Versiyon ji System</string>
     <string name="home_device">Sazî</string>
     <string name="home_system_abi">Pergala ABI</string>
@@ -87,3 +86,4 @@
     <string name="settings_keystore_wrong_alias_password">Şîfreya nasnavê çewt</string>
     <string name="settings_detail_patch_logs">Detail patch têketin</string>
 </resources>
+

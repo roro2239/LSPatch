@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Addไทย</string>
     <string name="install">ติดตั้ง</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">ฟังก์ชั่นบางอย่างใช้งานไม่ได้</string>
     <string name="home_api_version">เวอร์ชัน API</string>
     <string name="home_lspatch_version">เวอร์ชัน LSPatch</string>
-    <string name="home_framework_version">เวอร์ชันกรอบงาน</string>
     <string name="home_system_version">เวอร์ชันของระบบ</string>
     <string name="home_device">อุปกรณ์</string>
     <string name="home_system_abi">ระบบ ABI</string>
@@ -87,3 +86,4 @@
     <string name="settings_keystore_wrong_alias_password">รหัสผ่านนามแฝงไม่ถูกต้อง</string>
     <string name="settings_detail_patch_logs">บันทึกการแก้ไขรายละเอียด</string>
 </resources>
+

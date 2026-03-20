@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Tambah</string>
     <string name="install">Install</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Beberapa fungsi tidak tersedia</string>
     <string name="home_api_version">Versi API</string>
     <string name="home_lspatch_version">Versi LSPatch</string>
-    <string name="home_framework_version">Versi Kerangka</string>
     <string name="home_system_version">Versi Sistem</string>
     <string name="home_device">Perangkat</string>
     <string name="home_system_abi">Sistem ABI</string>
@@ -87,3 +86,4 @@
     <string name="settings_keystore_wrong_alias_password">Kata sandi alias salah</string>
     <string name="settings_detail_patch_logs">Detail log tambalan</string>
 </resources>
+

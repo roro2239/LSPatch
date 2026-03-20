@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Afegeix</string>
     <string name="install">Instal·lar</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Algunes funcions no estan disponibles</string>
     <string name="home_api_version">Versió de l\'API</string>
     <string name="home_lspatch_version">Versió LSPatch</string>
-    <string name="home_framework_version">Versió del marc</string>
     <string name="home_system_version">Versió del sistema</string>
     <string name="home_device">Dispositiu</string>
     <string name="home_system_abi">Sistema ABI</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">Injectar carregador dex</string>
     <string name="patch_inject_dex_desc">Per a aplicacions amb serveis aïllats, com ara els motors de renderització dels navegadors, activeu aquesta opció per assegurar-vos que funcionin correctament.</string>
 </resources>
+

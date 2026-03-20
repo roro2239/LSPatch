@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Добавить</string>
     <string name="install">Установить</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Некоторые функции недоступны</string>
     <string name="home_api_version">Версия API</string>
     <string name="home_lspatch_version">Версия LSPatch</string>
-    <string name="home_framework_version">Версия framework</string>
     <string name="home_system_version">Версия системы</string>
     <string name="home_device">Устройство</string>
     <string name="home_system_abi">Разрядность системы (ABI)</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">Inject loader dex</string>
     <string name="patch_inject_dex_desc">Для приложений с изолированными сервисами, такими как рендеринг браузеров, пожалуйста, включите эту опцию, чтобы убедиться, что они работают должным образом.</string>
 </resources>
+

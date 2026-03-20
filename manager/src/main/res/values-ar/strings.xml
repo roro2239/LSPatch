@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">إضافة</string>
     <string name="install">تثبيت</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">بعض الوظائف غير متاحة</string>
     <string name="home_api_version">إصدار API</string>
     <string name="home_lspatch_version">إصدار LSPatch</string>
-    <string name="home_framework_version">إصدار Framework</string>
     <string name="home_system_version">إصدار النظام</string>
     <string name="home_device">الجهاز</string>
     <string name="home_system_abi">نظام ABI</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">حقن ديكس</string>
     <string name="patch_inject_dex_desc">بالنسبة للتطبيقات ذات الخدمات المعزولة، مثل محركات عرض المتصفحات، يرجى تشغيل هذا الخيار للتأكد من أنها تعمل بشكل صحيح.</string>
 </resources>
+

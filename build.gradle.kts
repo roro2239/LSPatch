@@ -33,20 +33,27 @@ val (coreCommitCount, coreLatestTag) = FileRepositoryBuilder().setGitDir(rootPro
     .runCatching {
         build().use { repo ->
             val git = Git(repo)
+            val head = repo.refDatabase.exactRef("HEAD")?.objectId ?: return@use (1 to "unknown")
             val coreCommitCount =
                 git.log()
-                    .add(repo.refDatabase.exactRef("HEAD").objectId)
+                    .add(head)
                     .call().count() + 4200
             val ver = git.describe()
                 .setTags(true)
-                .setAbbrev(0).call().removePrefix("v")
+                .setAbbrev(0).call()?.removePrefix("v") ?: "unknown"
             coreCommitCount to ver
         }
-    }.getOrNull() ?: (1 to "1.0")
+    }.getOrDefault(1 to "unknown")
 
 // sync from https://github.com/JingMatrix/LSPosed/blob/master/build.gradle.kts
 val defaultManagerPackageName by extra("org.lsposed.lspatch")
-val apiCode by extra(93)
+val apiCode by extra(run {
+    runCatching {
+        val apiFile = rootProject.file("core/xposed/libxposed/api/src/main/java/io/github/libxposed/api/XposedInterface.java")
+        val matcher = Regex("""\bint\s+API\s*=\s*(\d+)""").find(apiFile.readText())
+        matcher?.groupValues?.get(1)?.toIntOrNull() ?: 93
+    }.getOrDefault(93)
+})
 val verCode by extra(commitCount)
 val verName by extra("0.8")
 val coreVerCode by extra(coreCommitCount)

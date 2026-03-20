@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Pridať</string>
     <string name="install">Inštalácia</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Niektoré funkcie sú nedostupné</string>
     <string name="home_api_version">Verzia API</string>
     <string name="home_lspatch_version">Verzia LSPatch</string>
-    <string name="home_framework_version">Verzia rámca</string>
     <string name="home_system_version">Verzia systému</string>
     <string name="home_device">Zariadenie</string>
     <string name="home_system_abi">Systém ABI</string>
@@ -87,3 +86,4 @@
     <string name="settings_keystore_wrong_alias_password">Nesprávne heslo aliasu</string>
     <string name="settings_detail_patch_logs">Podrobné protokoly o opravách</string>
 </resources>
+

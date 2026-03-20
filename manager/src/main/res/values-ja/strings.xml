@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">追加</string>
     <string name="install">インストール</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">一部の機能が使用できません</string>
     <string name="home_api_version">APIのバージョン</string>
     <string name="home_lspatch_version">LSPatchのバージョン</string>
-    <string name="home_framework_version">フレームワークのバージョン</string>
     <string name="home_system_version">システムのバージョン</string>
     <string name="home_device">デバイス</string>
     <string name="home_system_abi">システムABI</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">注入ローダーデックス</string>
     <string name="patch_inject_dex_desc">ブラウザのレンダリングエンジンなど、分離されたサービスを持つアプリケーションの場合は、このオプションをオンにして正常に動作するようにしてください。</string>
 </resources>
+

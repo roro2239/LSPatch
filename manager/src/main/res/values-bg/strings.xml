@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Добавяне на</string>
     <string name="install">Инсталиране на</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Някои функции са недостъпни</string>
     <string name="home_api_version">Версия на API</string>
     <string name="home_lspatch_version">Версия на LSPatch</string>
-    <string name="home_framework_version">Версия на рамката</string>
     <string name="home_system_version">Версия на системата</string>
     <string name="home_device">Устройство</string>
     <string name="home_system_abi">ABI на системата</string>
@@ -87,3 +86,4 @@
     <string name="settings_keystore_wrong_alias_password">Грешна парола за псевдоним</string>
     <string name="settings_detail_patch_logs">Подробни дневници на кръпките</string>
 </resources>
+

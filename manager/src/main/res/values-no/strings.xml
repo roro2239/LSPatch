@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add">Legge til</string>
     <string name="install">Installere</string>
@@ -18,7 +18,6 @@
     <string name="home_shizuku_warning">Noen funksjoner er utilgjengelige</string>
     <string name="home_api_version">API-versjon</string>
     <string name="home_lspatch_version">LSPatch-versjon</string>
-    <string name="home_framework_version">Rammeversjon</string>
     <string name="home_system_version">Systemversjon</string>
     <string name="home_device">Enhet</string>
     <string name="home_system_abi">System ABI</string>
@@ -89,3 +88,4 @@
     <string name="patch_inject_dex">Injiser lastebildeksel</string>
     <string name="patch_inject_dex_desc">For programmer med isolerte tjenester, som for eksempel rutenettmotorer for nettlesere, vennligst slå på dette alternativet for å sikre at de fungerer riktig.</string>
 </resources>
+
